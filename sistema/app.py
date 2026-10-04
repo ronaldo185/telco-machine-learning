@@ -222,8 +222,9 @@ class Servidor(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    #def archivo(self, file):
-    #    self.responder(file.read_bytes(), mimetypes.guess_type(file.name)[0] or "application/octet-stream")
+    def archivo(self, file):
+        self.responder(file.read_bytes(), mimetypes.guess_type(file.name)[0] or "application/octet-stream")
+    
     def host_valido(self):
         if os.environ.get("TELCO_PUBLICO") == "1":
             return True
@@ -232,8 +233,8 @@ class Servidor(BaseHTTPRequestHandler):
         f"localhost:{self.server.server_port}"
     }
 
-    def host_valido(self):
-        return self.headers.get("Host") in {f"127.0.0.1:{self.server.server_port}", f"localhost:{self.server.server_port}"}
+    #def host_valido(self):
+    #    return self.headers.get("Host") in {f"127.0.0.1:{self.server.server_port}", f"localhost:{self.server.server_port}"}
 
     def do_GET(self):
         if not self.host_valido():
