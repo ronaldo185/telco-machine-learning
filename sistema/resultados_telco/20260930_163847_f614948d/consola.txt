@@ -1,0 +1,13 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\1_regresion_lineal\telco.csv
+Entrenamiento: 5282; prueba: 1761
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+Variable de la regresión simple: tenure
+Entrenando lineal_simple...
+lineal_simple {'MAE': 25.2983, 'RMSE': 29.1832, 'R2': 0.0526}
+Entrenando lineal_multiple...
+lineal_multiple {'MAE': 0.7891, 'RMSE': 1.0499, 'R2': 0.9988}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_163847_f614948d

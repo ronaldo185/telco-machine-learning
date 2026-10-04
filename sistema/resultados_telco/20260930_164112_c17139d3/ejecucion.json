@@ -1,0 +1,43 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\3_regresion_logistica\\telco.csv; clases={0: 'No', 1: 'Yes'}",
+  "dataset": "Telco",
+  "tarea": "clasificacion",
+  "semilla": 42,
+  "entrenamiento": 5282,
+  "prueba": 1761,
+  "variables": [
+    "tenure",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "objetivo": "Churn",
+  "parametros": {
+    "logistica": {
+      "modelo__C": 10
+    }
+  },
+  "clases": [
+    "No",
+    "Yes"
+  ],
+  "reparto": "estratificado_por_cliente",
+  "referencia": {
+    "accuracy_siempre_mayoritaria": 0.7348097671777399
+  }
+}

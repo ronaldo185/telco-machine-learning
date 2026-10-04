@@ -1,0 +1,13 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\6_arboles_de_decision\telco.csv
+Entrenamiento: 5282; prueba: 1761
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+Entrenando arbol...
+arbol {'MAE': 1.0705, 'RMSE': 1.5028, 'R2': 0.9975}
+Parámetros elegidos SOLO en entrenamiento: {'modelo__max_depth': None, 'modelo__min_samples_leaf': 2}
+Entrenando random_forest...
+random_forest {'MAE': 0.965, 'RMSE': 1.3364, 'R2': 0.998}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164533_63ad1521

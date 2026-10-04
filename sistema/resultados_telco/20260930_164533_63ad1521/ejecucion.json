@@ -1,0 +1,39 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\6_arboles_de_decision\\telco.csv",
+  "dataset": "Telco",
+  "tarea": "regresion",
+  "semilla": 42,
+  "entrenamiento": 5282,
+  "prueba": 1761,
+  "variables": [
+    "tenure",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "objetivo": "MonthlyCharges",
+  "parametros": {
+    "arbol": {
+      "modelo__max_depth": null,
+      "modelo__min_samples_leaf": 2
+    }
+  },
+  "clases": null,
+  "reparto": "aleatorio_por_cliente",
+  "referencia": {
+    "MAE_media_entrenamiento": 25.985955096767203
+  }
+}

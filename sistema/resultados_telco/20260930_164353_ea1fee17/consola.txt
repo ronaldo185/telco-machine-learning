@@ -1,0 +1,43 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\5_naive_bayes\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 5282; prueba: 1761
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+Comparación didáctica: Multinomial usa datos reescalados, no conteos originales.
+Bernoulli usa indicadores binarios; Gaussian aproxima las entradas con distribuciones normales.
+Entrenando gaussian_nb...
+              precision    recall  f1-score   support
+
+          No       0.92      0.65      0.76      1294
+         Yes       0.46      0.84      0.59       467
+
+    accuracy                           0.70      1761
+   macro avg       0.69      0.74      0.68      1761
+weighted avg       0.80      0.70      0.71      1761
+
+gaussian_nb {'accuracy': 0.6962, 'balanced_accuracy': 0.7413, 'F1_macro': 0.6756, 'precision_abandono': 0.46, 'recall_abandono': 0.8373, 'ROC_AUC': 0.8105}
+Entrenando multinomial_nb...
+              precision    recall  f1-score   support
+
+          No       0.91      0.68      0.78      1294
+         Yes       0.48      0.81      0.60       467
+
+    accuracy                           0.71      1761
+   macro avg       0.69      0.74      0.69      1761
+weighted avg       0.79      0.71      0.73      1761
+
+multinomial_nb {'accuracy': 0.7149, 'balanced_accuracy': 0.7444, 'F1_macro': 0.6894, 'precision_abandono': 0.4778, 'recall_abandono': 0.8073, 'ROC_AUC': 0.8105}
+Entrenando bernoulli_nb...
+              precision    recall  f1-score   support
+
+          No       0.91      0.70      0.79      1294
+         Yes       0.49      0.80      0.61       467
+
+    accuracy                           0.72      1761
+   macro avg       0.70      0.75      0.70      1761
+weighted avg       0.79      0.72      0.74      1761
+
+bernoulli_nb {'accuracy': 0.7235, 'balanced_accuracy': 0.7475, 'F1_macro': 0.6961, 'precision_abandono': 0.4869, 'recall_abandono': 0.7987, 'ROC_AUC': 0.8105}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164353_ea1fee17

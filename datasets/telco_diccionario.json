@@ -1,0 +1,143 @@
+{
+  "diccionario": [
+    {
+      "Columna": "customerID",
+      "Tipo": "Texto",
+      "Significado y uso": "Identificador único. Solo trazabilidad; excluir del entrenamiento."
+    },
+    {
+      "Columna": "gender",
+      "Tipo": "Categoría",
+      "Significado y uso": "Sexo registrado: Male/Female."
+    },
+    {
+      "Columna": "SeniorCitizen",
+      "Tipo": "Binario",
+      "Significado y uso": "Adulto mayor: 1=sí, 0=no. No contiene edad exacta."
+    },
+    {
+      "Columna": "Partner",
+      "Tipo": "Categoría",
+      "Significado y uso": "Tiene pareja: Yes/No."
+    },
+    {
+      "Columna": "Dependents",
+      "Tipo": "Categoría",
+      "Significado y uso": "Tiene dependientes: Yes/No."
+    },
+    {
+      "Columna": "tenure",
+      "Tipo": "Número",
+      "Significado y uso": "Antigüedad del cliente, en meses."
+    },
+    {
+      "Columna": "PhoneService",
+      "Tipo": "Categoría",
+      "Significado y uso": "Servicio telefónico: Yes/No."
+    },
+    {
+      "Columna": "MultipleLines",
+      "Tipo": "Categoría",
+      "Significado y uso": "Varias líneas: Yes/No/No phone service."
+    },
+    {
+      "Columna": "InternetService",
+      "Tipo": "Categoría",
+      "Significado y uso": "Tipo de acceso: DSL/Fiber optic/No. No es el nombre de una empresa."
+    },
+    {
+      "Columna": "OnlineSecurity",
+      "Tipo": "Categoría",
+      "Significado y uso": "Seguridad en línea: Yes/No/No internet service."
+    },
+    {
+      "Columna": "OnlineBackup",
+      "Tipo": "Categoría",
+      "Significado y uso": "Respaldo en línea: Yes/No/No internet service."
+    },
+    {
+      "Columna": "DeviceProtection",
+      "Tipo": "Categoría",
+      "Significado y uso": "Protección de dispositivos: Yes/No/No internet service."
+    },
+    {
+      "Columna": "TechSupport",
+      "Tipo": "Categoría",
+      "Significado y uso": "Soporte técnico: Yes/No/No internet service."
+    },
+    {
+      "Columna": "StreamingTV",
+      "Tipo": "Categoría",
+      "Significado y uso": "TV por streaming: Yes/No/No internet service."
+    },
+    {
+      "Columna": "StreamingMovies",
+      "Tipo": "Categoría",
+      "Significado y uso": "Películas por streaming: Yes/No/No internet service."
+    },
+    {
+      "Columna": "Contract",
+      "Tipo": "Categoría",
+      "Significado y uso": "Contrato: Month-to-month/One year/Two year."
+    },
+    {
+      "Columna": "PaperlessBilling",
+      "Tipo": "Categoría",
+      "Significado y uso": "Facturación electrónica: Yes/No."
+    },
+    {
+      "Columna": "PaymentMethod",
+      "Tipo": "Categoría",
+      "Significado y uso": "Cheque electrónico, cheque por correo, débito bancario o tarjeta automáticos."
+    },
+    {
+      "Columna": "MonthlyCharges",
+      "Tipo": "Número",
+      "Significado y uso": "Cargo mensual; objetivo de regresión. Unidades monetarias, no bolivianos inferidos."
+    },
+    {
+      "Columna": "TotalCharges",
+      "Tipo": "Número",
+      "Significado y uso": "Cargos acumulados. 11 blancos: mediana aprendida en entrenamiento. Excluir en regresión."
+    },
+    {
+      "Columna": "Churn",
+      "Tipo": "Categoría",
+      "Significado y uso": "Abandono del servicio: Yes/No. Objetivo de clasificación; Yes es clase positiva."
+    }
+  ],
+  "ficha": [
+    {
+      "Tema": "Fuente",
+      "Detalle": "Archivo telco.csv proporcionado por el usuario; coincide con IBM Telco Customer Churn."
+    },
+    {
+      "Tema": "Procedencia",
+      "Detalle": "Dataset de ejemplo de una empresa ficticia; no acredita una empresa boliviana."
+    },
+    {
+      "Tema": "Unidad",
+      "Detalle": "Una fila por cliente: 7.043 clientes y 21 columnas."
+    },
+    {
+      "Tema": "Objetivos",
+      "Detalle": "Churn en clasificación; MonthlyCharges en regresión."
+    },
+    {
+      "Tema": "Preparación",
+      "Detalle": "11 TotalCharges vacíos se imputan solo en entrenamiento. Textos codificados; identificador excluido."
+    },
+    {
+      "Tema": "Evaluación",
+      "Detalle": "5.282 clientes de entrenamiento y 1.761 de prueba; semilla 42. Estratificada para Churn. CV interna de 3 particiones."
+    },
+    {
+      "Tema": "Límite",
+      "Detalle": "Sin fechas de observación ni asignación aleatoria. No valida predicciones futuras ni efectos causales."
+    },
+    {
+      "Tema": "Repositorio",
+      "Detalle": "https://github.com/IBM/telco-customer-churn-on-icp4d"
+    }
+  ]
+}

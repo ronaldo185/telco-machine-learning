@@ -1,0 +1,20 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\6_arboles_de_decision\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 5282; prueba: 1761
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+Entrenando arbol...
+              precision    recall  f1-score   support
+
+          No       0.84      0.88      0.86      1294
+         Yes       0.62      0.55      0.58       467
+
+    accuracy                           0.79      1761
+   macro avg       0.73      0.71      0.72      1761
+weighted avg       0.78      0.79      0.79      1761
+
+arbol {'accuracy': 0.7899, 'balanced_accuracy': 0.712, 'F1_macro': 0.7198, 'precision_abandono': 0.6174, 'recall_abandono': 0.546, 'ROC_AUC': 0.8267}
+Parámetros elegidos SOLO en entrenamiento: {'modelo__criterion': 'entropy', 'modelo__max_depth': 5, 'modelo__min_samples_leaf': 2}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164438_2cc2a468

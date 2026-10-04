@@ -1,0 +1,34 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\2_regresion_polinomial\\telco.csv",
+  "dataset": "Telco",
+  "tarea": "regresion",
+  "semilla": 42,
+  "entrenamiento": 5282,
+  "prueba": 1761,
+  "variables": [
+    "tenure",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "objetivo": "MonthlyCharges",
+  "parametros": {},
+  "clases": null,
+  "reparto": "aleatorio_por_cliente",
+  "referencia": {
+    "MAE_media_entrenamiento": 25.985955096767203
+  }
+}

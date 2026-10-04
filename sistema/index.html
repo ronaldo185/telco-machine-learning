@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Telco · Laboratorio de modelos</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">T</span><div><strong>Telco</strong><span>Laboratorio de modelos</span></div></div><span class="local"><i></i> Entorno local</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">MACHINE LEARNING · TELECOMUNICACIONES</p><h1>Conocer los datos.<br>Entender los modelos.</h1><p class="lead">Explora el abandono de clientes y sus cargos mensuales y compara los modelos de tu práctica.</p></div><div class="intro-note"><span>DATASET DE TRABAJO</span><strong>Clientes y servicios</strong><p><br>Fuente: IBM · dataset de ejemplo</p></div></section>
+    <nav class="tabs" aria-label="Secciones"><button class="tab active" data-tab="dataset" aria-current="page">01 <span>Dataset</span></button><button class="tab" data-tab="modelos">02 <span>Modelos</span></button><button class="tab" data-tab="documentos">03 <span>Documentos</span></button></nav>
+    <div id="error" class="error" role="alert" hidden></div>
+
+    <section id="dataset" class="panel">
+      <div class="stats" id="stats" aria-label="Resumen del dataset"><div class="stat"><span>Registros</span><strong>…</strong></div></div>
+      <div class="section-heading"><div><h2>Datos de la empresa</h2><p>Una fila representa a un cliente. Clasificación: abandono; regresión: cargo mensual.</p></div><div class="actions"><a class="button ghost" href="/dataset.csv" download="telco.csv">Descargar CSV</a></div></div>
+      <div class="card">
+        <form id="filters" class="filters"><label>Contrato<select id="contract-filter"><option value="">Todos los contratos</option></select></label><label>Abandono<select id="churn-filter"><option value="">Todos</option><option value="Yes">Sí</option><option value="No">No</option></select></label><label>Cliente<input id="customer-filter" type="text" placeholder="Buscar ID"></label><button class="button primary" type="submit">Filtrar tabla</button><button class="button ghost" id="reset-filter" type="button">Restablecer</button></form>
+        <p class="small inset">Estos filtros solo cambian la tabla. Los modelos utilizan el dataset completo.</p>
+        <div class="table-wrap" id="data-table" aria-live="polite"><p class="inset">Cargando dataset…</p></div>
+        <div class="pagination"><span id="page-info"></span><div><button id="prev" class="button ghost">Anterior</button><button id="next" class="button ghost">Siguiente</button></div></div>
+      </div>
+      <div class="notice" id="quality"></div>
+      <details class="card accordion" open><summary>Diccionario de datos <span>Qué significa cada columna</span></summary><div class="table-wrap" id="dictionary"></div></details>
+      <details class="card accordion"><summary>Estadísticas numéricas <span>Conteo, promedio, dispersión y rango</span></summary><p class="small inset">Resumen del dataset completo. mean = promedio; std = desviación estándar; 25%, 50% y 75% = percentiles.</p><div class="table-wrap" id="numeric-stats"></div></details>
+      <details class="card accordion"><summary>Ficha y procedencia <span>Contexto, preparación y limitaciones</span></summary><div class="table-wrap" id="dataset-notes"></div></details>
+    </section>
+
+    <section id="modelos" class="panel" hidden>
+      <div class="section-heading"><div><h2>Once temas, un dataset</h2><p>Elige un modelo, revisa sus parámetros y ejecuta la tarea disponible.</p></div><span class="pill">Una ejecución a la vez</span></div>
+      <div id="model-grid" class="model-grid"></div>
+      <section id="model-detail" class="card model-detail" hidden aria-label="Modelo seleccionado">
+        <div class="section-heading"><div><p class="eyebrow" id="model-number"></p><h2 id="model-title"></h2><p id="model-description"></p></div><div class="run-controls"><label>Tarea<select id="task"></select></label><button id="run" class="button primary" disabled>Ejecutar modelo</button></div></div>
+        <p class="notice" id="task-note"></p>
+        <div id="params-summary" class="param-summary" aria-live="polite"></div>
+        <details class="parameters"><summary>Ver parámetros y variantes del modelo</summary><p class="small">Configuración consultada en el código; no se modifica desde esta versión. Los parámetros elegidos por validación aparecen al terminar.</p><pre id="params-code"></pre></details>
+      </section>
+      <div class="section-heading result-heading"><div><h2>Resultados</h2><p>Las métricas y figuras se generan al ejecutar el modelo.</p></div><label class="history-label">Ejecuciones anteriores<select id="history"><option value="">Seleccionar una ejecución</option></select></label></div>
+      <div id="empty-results" class="empty card"><span class="empty-mark" aria-hidden="true">↗</span><h3>Tu primera comparación empieza arriba</h3><p>Abre un modelo y pulsa «Ejecutar modelo».</p></div>
+      <section id="results" class="card result-card" hidden aria-live="polite">
+        <div class="section-heading"><div><h3 id="result-title"></h3><p id="result-status"></p></div><button class="button ghost danger" id="cancel" hidden>Cancelar ejecución</button></div>
+        <div id="progress" class="progress" hidden><span></span></div>
+        <p id="result-note" class="notice" hidden></p>
+        <div id="metrics" class="table-wrap"></div>
+        <div id="chosen-params"></div>
+        <div id="plots" class="plots"></div>
+        <div id="downloads" class="downloads"></div>
+        <details class="console"><summary>Ver consola de ejecución</summary><pre id="log"></pre></details>
+      </section>
+    </section>
+
+    <section id="documentos" class="panel" hidden>
+      <div class="section-heading"><div><h2>Documentación de la práctica</h2><p>Dos guías en PDF para entender los datos y explicar tus resultados.</p></div></div>
+      <div id="documents" class="documents"></div>
+      <div class="notice">La bitácora describe el origen y las columnas. El informe explica los 11 temas, los parámetros principales y cómo leer las figuras.</div>
+    </section>
+    <footer><span>Telco · Práctica de aprendizaje automático</span><span>Clientes separados para entrenamiento y prueba; semilla 42.</span></footer>
+  </main>
+</body></html>
