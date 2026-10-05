@@ -1,0 +1,53 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\9_gradiant_boosting\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 5282; prueba: 1761
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+Stacking combina predicciones de otros modelos; no es una variante de Gradient Boosting.
+Entrenando gradient_boosting...
+              precision    recall  f1-score   support
+
+          No       0.83      0.91      0.87      1294
+         Yes       0.67      0.50      0.57       467
+
+    accuracy                           0.80      1761
+   macro avg       0.75      0.71      0.72      1761
+weighted avg       0.79      0.80      0.79      1761
+
+gradient_boosting {'accuracy': 0.8018, 'balanced_accuracy': 0.705, 'F1_macro': 0.7214, 'precision_abandono': 0.6695, 'recall_abandono': 0.4989, 'ROC_AUC': 0.846}
+Entrenando stacking...
+              precision    recall  f1-score   support
+
+          No       0.83      0.91      0.87      1294
+         Yes       0.66      0.47      0.55       467
+
+    accuracy                           0.80      1761
+   macro avg       0.74      0.69      0.71      1761
+weighted avg       0.78      0.80      0.78      1761
+
+stacking {'accuracy': 0.795, 'balanced_accuracy': 0.6922, 'F1_macro': 0.7088, 'precision_abandono': 0.6577, 'recall_abandono': 0.4732, 'ROC_AUC': 0.8359}
+Entrenando xgboost...
+              precision    recall  f1-score   support
+
+          No       0.83      0.90      0.86      1294
+         Yes       0.63      0.49      0.55       467
+
+    accuracy                           0.79      1761
+   macro avg       0.73      0.69      0.71      1761
+weighted avg       0.78      0.79      0.78      1761
+
+xgboost {'accuracy': 0.7893, 'balanced_accuracy': 0.6924, 'F1_macro': 0.7064, 'precision_abandono': 0.6341, 'recall_abandono': 0.4861, 'ROC_AUC': 0.8317}
+Entrenando catboost...
+              precision    recall  f1-score   support
+
+          No       0.84      0.91      0.87      1294
+         Yes       0.66      0.51      0.57       467
+
+    accuracy                           0.80      1761
+   macro avg       0.75      0.71      0.72      1761
+weighted avg       0.79      0.80      0.79      1761
+
+catboost {'accuracy': 0.8007, 'balanced_accuracy': 0.7063, 'F1_macro': 0.7217, 'precision_abandono': 0.6629, 'recall_abandono': 0.5054, 'ROC_AUC': 0.8427}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164856_bb053b0d

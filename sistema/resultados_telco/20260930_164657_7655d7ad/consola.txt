@@ -1,0 +1,15 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\7_boosting\telco.csv
+Entrenamiento: 5282; prueba: 1761
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+Random Forest: bagging; AdaBoost y Gradient Boosting: boosting.
+Entrenando bagging_random_forest...
+bagging_random_forest {'MAE': 0.9767, 'RMSE': 1.3425, 'R2': 0.998}
+Entrenando gradient_boosting...
+gradient_boosting {'MAE': 0.885, 'RMSE': 1.1662, 'R2': 0.9985}
+Entrenando adaboost...
+adaboost {'MAE': 3.1902, 'RMSE': 4.0231, 'R2': 0.982}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164657_7655d7ad

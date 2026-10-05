@@ -1,0 +1,13 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\8_adaboost\telco.csv
+Entrenamiento: 5282; prueba: 1761
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+LightGBM es boosting por gradiente; se compara con AdaBoost.
+Entrenando adaboost...
+adaboost {'MAE': 4.2802, 'RMSE': 5.7147, 'R2': 0.9637}
+Entrenando lightgbm...
+lightgbm {'MAE': 0.85, 'RMSE': 1.1335, 'R2': 0.9986}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164814_a224ecbe

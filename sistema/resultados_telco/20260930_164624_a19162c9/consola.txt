@@ -1,0 +1,42 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\7_boosting\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 5282; prueba: 1761
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+Random Forest: bagging; AdaBoost y Gradient Boosting: boosting.
+Entrenando bagging_random_forest...
+              precision    recall  f1-score   support
+
+          No       0.83      0.89      0.86      1294
+         Yes       0.62      0.49      0.55       467
+
+    accuracy                           0.79      1761
+   macro avg       0.72      0.69      0.70      1761
+weighted avg       0.77      0.79      0.78      1761
+
+bagging_random_forest {'accuracy': 0.7853, 'balanced_accuracy': 0.6897, 'F1_macro': 0.7026, 'precision_abandono': 0.6219, 'recall_abandono': 0.4861, 'ROC_AUC': 0.82}
+Entrenando gradient_boosting...
+              precision    recall  f1-score   support
+
+          No       0.83      0.91      0.87      1294
+         Yes       0.67      0.50      0.57       467
+
+    accuracy                           0.80      1761
+   macro avg       0.75      0.71      0.72      1761
+weighted avg       0.79      0.80      0.79      1761
+
+gradient_boosting {'accuracy': 0.8018, 'balanced_accuracy': 0.705, 'F1_macro': 0.7214, 'precision_abandono': 0.6695, 'recall_abandono': 0.4989, 'ROC_AUC': 0.846}
+Entrenando adaboost...
+              precision    recall  f1-score   support
+
+          No       0.84      0.89      0.87      1294
+         Yes       0.64      0.52      0.57       467
+
+    accuracy                           0.80      1761
+   macro avg       0.74      0.71      0.72      1761
+weighted avg       0.79      0.80      0.79      1761
+
+adaboost {'accuracy': 0.795, 'balanced_accuracy': 0.7066, 'F1_macro': 0.719, 'precision_abandono': 0.6402, 'recall_abandono': 0.5182, 'ROC_AUC': 0.8418}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_164624_a19162c9
