@@ -1,0 +1,6 @@
+COMPARACIÓN OBSERVACIONAL: contratos mensuales frente a contratos de uno/dos años.
+       filas  abandonos  proporcion_abandono
+grupo                                       
+A       3875       1655             0.427097
+B       3168        214             0.067551
+Asociación descriptiva, sin asignación aleatoria. No demuestra causalidad ni es un experimento A/B.

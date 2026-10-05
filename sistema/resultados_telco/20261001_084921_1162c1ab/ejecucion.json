@@ -1,0 +1,42 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\3_regresion_logistica\\telco.csv; clase positiva = Yes (Abandona)",
+  "dataset": "Telco",
+  "tarea": "clasificacion",
+  "problematica": "abandono de clientes",
+  "semilla": 42,
+  "entrenamiento": 10602,
+  "prueba": 3535,
+  "variables": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "objetivo": "Churn",
+  "clase_positiva": "Yes = Abandona",
+  "parametros": {
+    "logistica": {
+      "modelo__C": 10
+    }
+  },
+  "clases": [
+    "No",
+    "Yes"
+  ],
+  "reparto": "estratificado_por_cliente"
+}

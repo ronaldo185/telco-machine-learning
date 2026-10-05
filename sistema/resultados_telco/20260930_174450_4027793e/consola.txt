@@ -1,0 +1,20 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\4_knn\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 6000; prueba: 2000
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+Entrenando knn...
+              precision    recall  f1-score   support
+
+          No       0.84      0.87      0.86      1533
+         Yes       0.53      0.47      0.50       467
+
+    accuracy                           0.78      2000
+   macro avg       0.69      0.67      0.68      2000
+weighted avg       0.77      0.78      0.77      2000
+
+knn {'accuracy': 0.7785, 'balanced_accuracy': 0.6709, 'F1_macro': 0.6776, 'precision_abandono': 0.529, 'recall_abandono': 0.469, 'ROC_AUC': 0.7962}
+Parámetros elegidos SOLO en entrenamiento: {'modelo__n_neighbors': 15}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_174450_4027793e

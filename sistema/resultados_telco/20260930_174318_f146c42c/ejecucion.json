@@ -1,0 +1,38 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\4_knn\\telco.csv",
+  "dataset": "Telco",
+  "tarea": "regresion",
+  "semilla": 42,
+  "entrenamiento": 6000,
+  "prueba": 2000,
+  "variables": [
+    "tenure",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "objetivo": "MonthlyCharges",
+  "parametros": {
+    "knn": {
+      "modelo__n_neighbors": 11
+    }
+  },
+  "clases": null,
+  "reparto": "aleatorio_por_cliente",
+  "referencia": {
+    "MAE_media_entrenamiento": 26.494637883333336
+  }
+}

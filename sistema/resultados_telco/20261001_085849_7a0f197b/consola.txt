@@ -1,0 +1,5 @@
+usage: modelo.py [-h] [--tarea {clasificacion}] [--datos DATOS]
+                 [--objetivo OBJETIVO] [--hoja HOJA] [--separador SEPARADOR]
+                 [--columnas COLUMNAS [COLUMNAS ...]] [--salida SALIDA]
+                 [--graficas | --sin-graficas] [--demo]
+modelo.py: error: argument --tarea: invalid choice: 'regresion' (choose from 'clasificacion')

@@ -1,0 +1,31 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\8_adaboost\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 10602; prueba: 3535
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+LightGBM es boosting por gradiente; se compara con AdaBoost.
+Entrenando adaboost...
+              precision    recall  f1-score   support
+
+          No       0.87      1.00      0.93      3068
+         Yes       0.00      0.00      0.00       467
+
+    accuracy                           0.87      3535
+   macro avg       0.43      0.50      0.46      3535
+weighted avg       0.75      0.87      0.81      3535
+
+adaboost {'accuracy': 0.8679, 'balanced_accuracy': 0.5, 'F1_macro': 0.4646, 'precision_abandono': 0.0, 'recall_abandono': 0.0, 'ROC_AUC': 0.8459}
+Entrenando lightgbm...
+              precision    recall  f1-score   support
+
+          No       0.91      0.96      0.93      3068
+         Yes       0.58      0.35      0.44       467
+
+    accuracy                           0.88      3535
+   macro avg       0.75      0.66      0.69      3535
+weighted avg       0.86      0.88      0.87      3535
+
+lightgbm {'accuracy': 0.8812, 'balanced_accuracy': 0.6556, 'F1_macro': 0.6853, 'precision_abandono': 0.5842, 'recall_abandono': 0.349, 'ROC_AUC': 0.8664}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20261001_092531_2e9a249b

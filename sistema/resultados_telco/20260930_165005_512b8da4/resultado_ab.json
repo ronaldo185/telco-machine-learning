@@ -1,0 +1,23 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\10_ab_testing\\telco.csv",
+  "modo": "observacional",
+  "filas": 7043,
+  "grupos": {
+    "A": {
+      "filas": 3875,
+      "abandonos": 1655,
+      "proporcion_abandono": 0.4270967741935484
+    },
+    "B": {
+      "filas": 3168,
+      "abandonos": 214,
+      "proporcion_abandono": 0.06755050505050506
+    }
+  },
+  "etiquetas": {
+    "A": "Mes a mes",
+    "B": "Uno o dos años"
+  },
+  "diferencia_proporcion_B_menos_A": -0.35954626914304333,
+  "interpretacion": "Asociación descriptiva, sin asignación aleatoria. No demuestra causalidad ni es un experimento A/B."
+}

@@ -1,0 +1,8 @@
+Datos: DEMOSTRACIÓN: conversiones sintéticas, semilla 42
+Filas: 2000 Grupos: {'A': 'Grupo simulado A', 'B': 'Grupo simulado B'}
+Tasa A: 11.80%; tasa B: 17.40%
+Diferencia B-A: 5.60 puntos porcentuales
+Intervalo 95.0% B-A: [2.51, 8.69] puntos porcentuales
+p-valor bilateral: 0.000481
+La prueba detecta una diferencia de proporciones bajo sus supuestos.
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_165119_2f98ed51

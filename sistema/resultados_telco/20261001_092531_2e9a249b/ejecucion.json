@@ -1,0 +1,40 @@
+{
+  "fuente": "D:\\ml\\exp2\\metodos completos\\metodos completos\\8_adaboost\\telco.csv; clases={0: 'No', 1: 'Yes'}",
+  "dataset": "Telco",
+  "tarea": "clasificacion",
+  "semilla": 42,
+  "entrenamiento": 10602,
+  "prueba": 3535,
+  "variables": [
+    "tenure",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "objetivo": "Churn",
+  "parametros": {},
+  "clases": [
+    "No",
+    "Yes"
+  ],
+  "avisos": [],
+  "reparto": "estratificado_por_cliente",
+  "referencia": {
+    "accuracy_siempre_mayoritaria": 0.8678925035360678
+  }
+}

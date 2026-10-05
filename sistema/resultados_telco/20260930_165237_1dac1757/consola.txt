@@ -1,0 +1,12 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\11_svm\telco.csv
+Entrenamiento: 5282; prueba: 1761
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+Entrenando svm_lineal...
+svm_lineal {'MAE': 0.7891, 'RMSE': 1.0499, 'R2': 0.9988}
+Entrenando svm_rbf...
+svm_rbf {'MAE': 1.3595, 'RMSE': 1.7058, 'R2': 0.9968}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_165237_1dac1757

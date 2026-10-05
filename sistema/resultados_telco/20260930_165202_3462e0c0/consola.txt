@@ -1,0 +1,30 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Clases: {0: 'No', 1: 'Yes'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\11_svm\telco.csv; clases={0: 'No', 1: 'Yes'}
+Entrenamiento: 5282; prueba: 1761
+Objetivo: Churn
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+Entrenando svm_lineal...
+              precision    recall  f1-score   support
+
+          No       0.84      0.90      0.87      1294
+         Yes       0.65      0.54      0.59       467
+
+    accuracy                           0.80      1761
+   macro avg       0.75      0.72      0.73      1761
+weighted avg       0.79      0.80      0.79      1761
+
+svm_lineal {'accuracy': 0.8007, 'balanced_accuracy': 0.7159, 'F1_macro': 0.7281, 'precision_abandono': 0.651, 'recall_abandono': 0.5353, 'ROC_AUC': 0.8416}
+Entrenando svm_rbf...
+              precision    recall  f1-score   support
+
+          No       0.84      0.88      0.86      1294
+         Yes       0.62      0.55      0.58       467
+
+    accuracy                           0.79      1761
+   macro avg       0.73      0.71      0.72      1761
+weighted avg       0.78      0.79      0.79      1761
+
+svm_rbf {'accuracy': 0.791, 'balanced_accuracy': 0.7134, 'F1_macro': 0.7213, 'precision_abandono': 0.6199, 'recall_abandono': 0.5482, 'ROC_AUC': 0.7876}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_165202_3462e0c0

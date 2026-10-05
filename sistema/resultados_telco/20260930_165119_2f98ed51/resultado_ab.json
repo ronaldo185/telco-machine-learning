@@ -1,0 +1,25 @@
+{
+  "n_A": 1000,
+  "n_B": 1000,
+  "conversiones_A": 118,
+  "conversiones_B": 174,
+  "tasa_A": 0.118,
+  "tasa_B": 0.174,
+  "diferencia_B_menos_A": 0.055999999999999994,
+  "cambio_relativo": 0.47457627118644075,
+  "intervalo_diferencia": [
+    0.025087809791725132,
+    0.08691522198503163
+  ],
+  "confianza": 0.95,
+  "p_valor_fisher_bilateral": 0.00048099249381896013,
+  "alpha": 0.05,
+  "diferencia_significativa": true,
+  "fuente": "DEMOSTRACIÓN: conversiones sintéticas, semilla 42",
+  "modo": "demo",
+  "grupos": {
+    "A": "Grupo simulado A",
+    "B": "Grupo simulado B"
+  },
+  "interpretacion": "Verificar asignación aleatoria e independencia para interpretación experimental."
+}

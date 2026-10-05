@@ -1,0 +1,23 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\2_regresion_polinomial\telco.csv
+Entrenamiento: 6000; prueba: 2000
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+Entrenando lineal...
+lineal {'MAE': 0.8341, 'RMSE': 1.0892, 'R2': 0.9987}
+Entrenando polinomial...
+polinomial {'MAE': 0.8343, 'RMSE': 1.0895, 'R2': 0.9987}
+Entrenando ridge...
+ridge {'MAE': 0.8344, 'RMSE': 1.0896, 'R2': 0.9987}
+Entrenando lasso...
+lasso {'MAE': 0.9401, 'RMSE': 1.2039, 'R2': 0.9984}
+Entrenando elastic_net...
+elastic_net {'MAE': 1.8635, 'RMSE': 2.3121, 'R2': 0.9942}
+Perfil lineal: desviación máxima respecto a la recta entre extremos = 0.000000
+Perfil polinomial: desviación máxima respecto a la recta entre extremos = 0.029922
+Perfil ridge: desviación máxima respecto a la recta entre extremos = 0.028648
+Perfil lasso: desviación máxima respecto a la recta entre extremos = 0.000000
+Perfil elastic_net: desviación máxima respecto a la recta entre extremos = 0.171399
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_174549_fc8d5474

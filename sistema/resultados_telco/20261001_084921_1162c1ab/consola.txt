@@ -1,0 +1,27 @@
+Dataset Telco detectado: el objetivo es predecir Churn.
+Yes = Abandona | No = Permanece
+Clases: {0: 'No = Permanece', 1: 'Yes = Abandona'}
+Datos: D:\ml\exp2\metodos completos\metodos completos\3_regresion_logistica\telco.csv; clase positiva = Yes (Abandona)
+Entrenamiento: 10602; prueba: 3535
+Objetivo: Churn
+Entradas: gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Reparto por clientes; semilla 42; clasificación estratificada.
+Objetivo: identificar clientes con riesgo de abandono.
+Clase 0 = Permanece
+Clase 1 = Abandona
+Problema: predicción del abandono de clientes. Clase positiva: Yes = Abandona.
+Entrenando logistica...
+
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+   Permanece       0.87      0.99      0.93      3068
+    Abandona       0.38      0.05      0.09       467
+
+    accuracy                           0.86      3535
+   macro avg       0.63      0.52      0.51      3535
+weighted avg       0.81      0.86      0.82      3535
+
+logistica {'accuracy': 0.8636, 'balanced_accuracy': 0.5193, 'F1_macro': 0.5084, 'precision_abandono': 0.381, 'recall_abandono': 0.0514, 'ROC_AUC': 0.8003}
+Parámetros elegidos SOLO en entrenamiento: {'modelo__C': 10}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20261001_084921_1162c1ab

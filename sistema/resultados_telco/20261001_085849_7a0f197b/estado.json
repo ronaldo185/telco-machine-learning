@@ -1,0 +1,10 @@
+{
+  "id": "20261001_085849_7a0f197b",
+  "modelo": "8",
+  "nombre": "AdaBoost y LightGBM",
+  "tarea": "regresion",
+  "estado": "cancelado",
+  "inicio": 1790859529.9138045,
+  "codigo_salida": 1,
+  "fin": 1790859613.9818406
+}

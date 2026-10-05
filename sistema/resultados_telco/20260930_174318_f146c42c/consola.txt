@@ -1,0 +1,11 @@
+Telco: TotalCharges faltantes se imputan con la mediana SOLO del entrenamiento.
+Datos: D:\ml\exp2\metodos completos\metodos completos\4_knn\telco.csv
+Entrenamiento: 6000; prueba: 2000
+Objetivo: MonthlyCharges
+Entradas: tenure, gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
+Reparto por clientes; semilla 42; clasificación estratificada. No es un pronóstico temporal.
+MAE y RMSE: unidades monetarias del cargo mensual. No se usan TotalCharges ni Churn como entradas.
+Entrenando knn...
+knn {'MAE': 2.7221, 'RMSE': 4.0773, 'R2': 0.9818}
+Parámetros elegidos SOLO en entrenamiento: {'modelo__n_neighbors': 11}
+Resultados guardados: D:\ml\exp2\metodos completos\metodos completos\sistema\resultados_telco\20260930_174318_f146c42c
